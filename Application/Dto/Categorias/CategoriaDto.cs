@@ -12,5 +12,6 @@ namespace Application.Dto.Categorias
         public Guid Id { get; set; }
         public Guid UsuarioId { get; set; }
         public string Nombre { get; set; }
+        public string Tipo { get; set; }
     }
 }

@@ -32,5 +32,14 @@ namespace Domain.Model.Movimientos
             Saldo = saldo;
             Fecha = DateTime.Now;
         }
+
+        public void editarMovimiento(Guid cuentaId, Guid categoriaId, string descripcion, string tipo, decimal saldo)
+        {
+            CuentaId = cuentaId;
+            CategoriaId = categoriaId;
+            Descripcion = descripcion;
+            Tipo = tipo;
+            Saldo = saldo;
+        }
     }
 }

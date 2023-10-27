@@ -22,3 +22,15 @@ C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\ejemplo modulo2_backend\S
 C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\ejemplo modulo2_backend\SharedKernel\obj\Debug\net7.0\refint\SharedKernel.dll
 C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\ejemplo modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.pdb
 C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\ejemplo modulo2_backend\SharedKernel\obj\Debug\net7.0\ref\SharedKernel.dll
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\bin\Debug\net7.0\SharedKernel.deps.json
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\bin\Debug\net7.0\SharedKernel.dll
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\bin\Debug\net7.0\SharedKernel.pdb
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.csproj.AssemblyReference.cache
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.AssemblyInfoInputs.cache
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.AssemblyInfo.cs
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.dll
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\refint\SharedKernel.dll
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\SharedKernel.pdb
+C:\Users\Andres\OneDrive - Universidad Núr\Escritorio\MODULO II\modulo2_backend\SharedKernel\obj\Debug\net7.0\ref\SharedKernel.dll

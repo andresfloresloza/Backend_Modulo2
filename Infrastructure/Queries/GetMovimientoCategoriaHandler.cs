@@ -24,8 +24,8 @@ namespace Infrastructure.Queries
                 .Select(categoria => new MovimientoDto
                 {
                     Id = categoria.Id,
-                    CuentaId = categoria.CuentaId,
-                    CategoriaId = categoria.CategoriaId,
+                    Cuenta = categoria.Cuenta.Nombre,
+                    Categoria = categoria.Categoria.Nombre,
                     Descripcion = categoria.Descripcion,
                     Tipo = categoria.Tipo,
                     Saldo = categoria.Saldo

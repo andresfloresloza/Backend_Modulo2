@@ -38,18 +38,19 @@ namespace Domain.Model.Usuarios
             var cuentaPorDefecto = new Cuenta(Id, nombre);
             Cuentas.Add(cuentaPorDefecto);
         }
-        public void AñadirCategoriaPorDefecto(Guid Id, string nombre)
+        public void AñadirCategoriaPorDefecto(Guid Id, string nombre, string tipo)
         {
-            var categoriaPorDefecto = new Categoria(Id, nombre);
+            var categoriaPorDefecto = new Categoria(Id, nombre,tipo);
             Categorias.Add(categoriaPorDefecto);
         }
 
         public void AñadirPorDefecto(Guid Id)
         {
             AñadirCuentaPorDefecto(Id, "Cuenta Principal");
-            AñadirCategoriaPorDefecto(Id, "Transporte");
-            AñadirCategoriaPorDefecto(Id, "Alimentos");
-            AñadirCategoriaPorDefecto(Id, "Entretenimiento");
+            AñadirCategoriaPorDefecto(Id, "Sueldos", "ingreso");
+            AñadirCategoriaPorDefecto(Id, "Ventas", "ingreso");
+            AñadirCategoriaPorDefecto(Id, "Transporte", "egreso");
+            AñadirCategoriaPorDefecto(Id, "Alimentos", "egreso");
         }
 
         public void IngresoMontoTotal(decimal monto)

@@ -1,5 +1,6 @@
-﻿using Application.UseCases.Commands.Movimientos.CrearEgreso;
-using Application.UseCases.Commands.Movimientos.CrearIngreso;
+﻿using Application.UseCases.Commands.Movimientos.ActualizarMovimiento;
+using Application.UseCases.Commands.Movimientos.CrearMovimiento;
+using Application.UseCases.Commands.Movimientos.EliminarMovimiento;
 using Application.UseCases.Queries.Movimientos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -19,9 +20,9 @@ namespace WebApp.Controllers
             _logger = logger;
         }
 
-        [Route("ingreso")]
+        [Route("insert")]
         [HttpPost]
-        public async Task<IActionResult> CrearIngreso([FromBody] CrearIngresoCommand command)
+        public async Task<IActionResult> CrearMovimiento([FromBody] CrearMovimientoCommand command)
         {
             try
             {
@@ -30,13 +31,14 @@ namespace WebApp.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al crear el ingreso");
+                _logger.LogError(ex, "Error al crear el movimiento");
                 return BadRequest();
             }
         }
-        [Route("egreso")]
-        [HttpPost]
-        public async Task<IActionResult> CrearEgreso([FromBody] CrearEgresoCommand command)
+
+        [Route("update")]
+        [HttpPut]
+        public async Task<IActionResult> ActualizarMovimiento([FromBody] ActualizarMovimientoCommand command)
         {
             try
             {
@@ -45,9 +47,30 @@ namespace WebApp.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al crear el egreso");
+                _logger.LogError(ex, "Error al actualizar el movimiento");
                 return BadRequest();
             }
+        }
+
+        [Route("delete")]
+        [HttpDelete]
+        public async Task<IActionResult> EliminarMovimiento([FromBody] EliminarMovimientoCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Route("{id}")]
+        [HttpGet]
+        public async Task<IActionResult> GetDetalleById([FromRoute] Guid id)
+        {
+            var query = new GetMovimientoByIdQuery()
+            {
+                Id = id
+            };
+            var result = await _mediator.Send(query);
+
+            return Ok(result);
         }
 
         [Route("cuenta/{cuentaId}")]
@@ -65,7 +88,7 @@ namespace WebApp.Controllers
 
         [Route("categoria/{categoriaId}")]
         [HttpGet]
-        public async Task<IActionResult> Get([FromRoute] Guid categoriaId)
+        public async Task<IActionResult> GetCategoria([FromRoute] Guid categoriaId)
         {
             var query = new GetMovimientoCategoriaByIdQuery()
             {

@@ -1,9 +1,15 @@
 ﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Application.UseCases.Commands.Movimientos.CrearIngreso
+namespace Application.UseCases.Commands.Movimientos.ActualizarMovimiento
 {
-    public record CrearIngresoCommand : IRequest<Guid>
+    public record ActualizarMovimientoCommand : IRequest<Guid>
     {
+        public Guid Id { get; set; }
         public Guid CuentaId { get; set; }
         public Guid CategoriaId { get; set; }
 
@@ -12,7 +18,7 @@ namespace Application.UseCases.Commands.Movimientos.CrearIngreso
         public decimal Saldo { get; set; }
 
 
-        public CrearIngresoCommand(Guid cuentaId, Guid categoriaId, string descripcion, string tipo, decimal saldo)
+        public ActualizarMovimientoCommand(Guid cuentaId, Guid categoriaId, string descripcion, string tipo, decimal saldo)
         {
             CuentaId = cuentaId;
             CategoriaId = categoriaId;

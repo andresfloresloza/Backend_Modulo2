@@ -31,7 +31,8 @@ namespace Application.UseCases.Commands.Categorias.CrearCategoria
 
             var categoria = _categoriaFactory.Crear(
                 request.UsuarioId,
-                request.Nombre
+                request.Nombre,
+                request.Tipo
                 );
 
             await _categoriaRepository.CreateAsync(categoria);

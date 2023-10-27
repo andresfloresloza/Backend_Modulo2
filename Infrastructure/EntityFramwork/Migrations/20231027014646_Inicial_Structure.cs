@@ -33,7 +33,8 @@ namespace Infrastructure.EntityFramwork.Migrations
                 {
                     id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     usuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    tipo = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,6 +96,40 @@ namespace Infrastructure.EntityFramwork.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Transferencia",
+                columns: table => new
+                {
+                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    cuentaOrigenId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    cuentaDestinoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    usuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    saldo = table.Column<decimal>(type: "decimal(20,2)", precision: 20, scale: 2, nullable: false),
+                    fecha = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Transferencia", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Transferencia_Cuenta_cuentaDestinoId",
+                        column: x => x.cuentaDestinoId,
+                        principalTable: "Cuenta",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Transferencia_Cuenta_cuentaOrigenId",
+                        column: x => x.cuentaOrigenId,
+                        principalTable: "Cuenta",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Transferencia_Usuario_usuarioId",
+                        column: x => x.usuarioId,
+                        principalTable: "Usuario",
+                        principalColumn: "usuarioId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Categoria_usuarioId",
                 table: "Categoria",
@@ -114,6 +149,21 @@ namespace Infrastructure.EntityFramwork.Migrations
                 name: "IX_Movimiento_cuentaId",
                 table: "Movimiento",
                 column: "cuentaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transferencia_cuentaDestinoId",
+                table: "Transferencia",
+                column: "cuentaDestinoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transferencia_cuentaOrigenId",
+                table: "Transferencia",
+                column: "cuentaOrigenId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Transferencia_usuarioId",
+                table: "Transferencia",
+                column: "usuarioId");
         }
 
         /// <inheritdoc />
@@ -121,6 +171,9 @@ namespace Infrastructure.EntityFramwork.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Movimiento");
+
+            migrationBuilder.DropTable(
+                name: "Transferencia");
 
             migrationBuilder.DropTable(
                 name: "Categoria");

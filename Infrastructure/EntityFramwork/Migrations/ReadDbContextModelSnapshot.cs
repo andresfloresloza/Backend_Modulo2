@@ -34,6 +34,11 @@ namespace Infrastructure.EntityFramwork.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("nombre");
 
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("tipo");
+
                     b.Property<Guid>("UsuarioId")
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("usuarioId");
@@ -116,6 +121,45 @@ namespace Infrastructure.EntityFramwork.Migrations
                     b.ToTable("Movimiento", (string)null);
                 });
 
+            modelBuilder.Entity("Infrastructure.EntityFramwork.ReadModel.Transferencias.TransferenciaReadModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<Guid>("CuentaDestinoId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("cuentaDestinoId");
+
+                    b.Property<Guid>("CuentaOrigenId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("cuentaOrigenId");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("fecha");
+
+                    b.Property<decimal>("Saldo")
+                        .HasPrecision(20, 2)
+                        .HasColumnType("decimal(20,2)")
+                        .HasColumnName("saldo");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("usuarioId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CuentaDestinoId");
+
+                    b.HasIndex("CuentaOrigenId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Transferencia", (string)null);
+                });
+
             modelBuilder.Entity("Infrastructure.EntityFramwork.ReadModel.Usuarios.UsuarioReadModel", b =>
                 {
                     b.Property<Guid>("UsuarioId")
@@ -192,6 +236,33 @@ namespace Infrastructure.EntityFramwork.Migrations
                     b.Navigation("Categoria");
 
                     b.Navigation("Cuenta");
+                });
+
+            modelBuilder.Entity("Infrastructure.EntityFramwork.ReadModel.Transferencias.TransferenciaReadModel", b =>
+                {
+                    b.HasOne("Infrastructure.EntityFramwork.ReadModel.Cuentas.CuentaReadModel", "CuentaDestino")
+                        .WithMany()
+                        .HasForeignKey("CuentaDestinoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.EntityFramwork.ReadModel.Cuentas.CuentaReadModel", "CuentaOrigen")
+                        .WithMany()
+                        .HasForeignKey("CuentaOrigenId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.EntityFramwork.ReadModel.Usuarios.UsuarioReadModel", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CuentaDestino");
+
+                    b.Navigation("CuentaOrigen");
+
+                    b.Navigation("Usuario");
                 });
 #pragma warning restore 612, 618
         }

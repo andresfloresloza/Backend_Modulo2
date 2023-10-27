@@ -10,5 +10,7 @@ namespace Infrastructure.EntityFramwork.ReadModel.Categorias
         public UsuarioReadModel Usuario { get; set; }
         public Guid UsuarioId { get; set; }
         public string Nombre { get; set; }
+        public string Tipo { get; set; }
+
     }
 }

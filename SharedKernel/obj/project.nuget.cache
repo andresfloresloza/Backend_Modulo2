@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uorJhXW6tpcxai+/NKwtOD12q+WWEVGmBSBNgzrfNb6ooQDQGGBWmT8qvRZGBxAn1T6m+iDgxh2rO/vXbsr1bg==",
+  "dgSpecHash": "rJiPGRBR05slz7b/OCapgiE0ke+f2Hgig5tVfCw+JYO4pWqONwhPnkbZrVtljM0EwDKqHg10kYE+0Bv21wZj9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
+  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andres\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\Andres\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

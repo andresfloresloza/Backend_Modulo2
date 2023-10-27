@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wn/Qxvc/j5lL3+JmVSoMByVqESUbKY6SqAemQ81DzJxWBK2duVwbi4fLT1Gu7SSPGIQ9vAb97fIRyoFwUAqaWw==",
+  "dgSpecHash": "B3XekorQUZAxV7RLLRL+NW3CONC8XPrYNLUw7sb5A9PPtszlIKgICvFkg4ifUI/S54zbl9r4pXp0B/C9mHuVXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\WebApp\\WebApp.csproj",
+  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andres\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Andres\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

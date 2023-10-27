@@ -7,11 +7,13 @@ namespace Application.UseCases.Commands.Categorias.CrearCategoria
         public Guid UsuarioId { get; set; }
 
         public string Nombre { get; set; }
+        public string Tipo { get; set; }
 
-        public CrearCategoriaCommand(Guid usuarioId, string nombre)
+        public CrearCategoriaCommand(Guid usuarioId, string nombre, string tipo)
         {
             UsuarioId = usuarioId;
             Nombre = nombre;
+            Tipo = tipo;
         }
     }
 }

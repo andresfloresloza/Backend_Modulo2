@@ -24,6 +24,7 @@ namespace Application.UseCases.Commands.Usuarios.CrearUsuario
         {
             var usuario = GetUsuario(request);
             usuario.AñadirPorDefecto(usuario.Id);
+
             await _usuarioRepository.CreateAsync(usuario);
             await _unitOfWork.Commit();
             return usuario.Id;

@@ -1,4 +1,5 @@
 ﻿using Domain.Factory.Movimientos;
+using Domain.Model.Movimientos;
 using Domain.Repository.Categorias;
 using Domain.Repository.Cuentas;
 using Domain.Repository.Movimientos;
@@ -8,9 +9,9 @@ using MediatR;
 using SharedKernel.Core;
 using System.Threading;
 
-namespace Application.UseCases.Commands.Movimientos.CrearIngreso
+namespace Application.UseCases.Commands.Movimientos.CrearMovimiento
 {
-    public class CrearIngresoHandler : IRequestHandler<CrearIngresoCommand, Guid>
+    public class CrearMovimientoHandler : IRequestHandler<CrearMovimientoCommand, Guid>
     {
         private readonly IMovimientoRepository _movimientoRepository;
         private readonly ICuentaRepository _cuentaRepository;
@@ -20,7 +21,7 @@ namespace Application.UseCases.Commands.Movimientos.CrearIngreso
         private readonly IMovimientoFactory _movimientoFactory;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CrearIngresoHandler(IMovimientoRepository movimientoRepository, ICuentaRepository cuentaRepository, ICategoriaRepository categoriaRepository, IUsuarioRepository usuarioRepository, IMovimientoFactory movimientoFactory, IUnitOfWork unitOfWort)
+        public CrearMovimientoHandler(IMovimientoRepository movimientoRepository, ICuentaRepository cuentaRepository, ICategoriaRepository categoriaRepository, IUsuarioRepository usuarioRepository, IMovimientoFactory movimientoFactory, IUnitOfWork unitOfWort)
         {
             _movimientoRepository = movimientoRepository;
             _cuentaRepository = cuentaRepository;
@@ -30,7 +31,7 @@ namespace Application.UseCases.Commands.Movimientos.CrearIngreso
             _unitOfWork = unitOfWort;
         }
 
-        public async Task<Guid> Handle(CrearIngresoCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CrearMovimientoCommand request, CancellationToken cancellationToken)
         {
             var cuenta = await _cuentaRepository.FindByIdAsync(request.CuentaId);
             var categoria = await _categoriaRepository.FindByIdAsync(request.CategoriaId);
@@ -45,24 +46,43 @@ namespace Application.UseCases.Commands.Movimientos.CrearIngreso
                 throw new BussinessRuleValidationException("Categoría no encontrada");
             }
 
+            Movimiento movimiento;
 
-            var movimiento = _movimientoFactory.Crear(
-                request.CuentaId,
-                request.CategoriaId,
-                request.Descripcion,
-                request.Tipo,
-                request.Saldo
-            );
+            if (request.Tipo == "ingreso")
+            {
+                movimiento = _movimientoFactory.Crear(
+                    request.CuentaId,
+                    request.CategoriaId,
+                    request.Descripcion,
+                    request.Tipo,
+                    request.Saldo
+                );
+
+                cuenta.Ingreso(request.Saldo);
+                usuario.IngresoMontoTotal(request.Saldo);
+            }
+            else if (request.Tipo == "egreso")
+            {
+                movimiento = _movimientoFactory.Crear(
+                    request.CuentaId,
+                    request.CategoriaId,
+                    request.Descripcion,
+                    request.Tipo,
+                    request.Saldo
+                );
+
+                cuenta.Egreso(request.Saldo);
+                usuario.EgresoMontoTotal(request.Saldo);
+            }
+            else
+            {
+                throw new BussinessRuleValidationException("Tipo de movimiento no válido");
+            }
 
 
             await _movimientoRepository.CreateAsync(movimiento);
-
-            cuenta.Ingreso(request.Saldo);
             await _cuentaRepository.UpdateAsync(cuenta);
-
-            usuario.IngresoMontoTotal(request.Saldo);
             await _usuarioRepository.UpdateAsync(usuario);
-
             await _unitOfWork.Commit();
             return movimiento.Id;
         }

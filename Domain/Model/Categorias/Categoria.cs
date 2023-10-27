@@ -8,10 +8,11 @@ namespace Domain.Model.Categorias
         public Guid UsuarioId { get; private set; }
 
         public NombreValue Nombre { get; private set; }
+        public TipoValue Tipo { get; private set; }
 
         public Categoria() { }
 
-        public Categoria(Guid usuarioId, string nombre)
+        public Categoria(Guid usuarioId, string nombre, string tipo)
         {
             if (usuarioId == Guid.Empty)
             {
@@ -20,7 +21,7 @@ namespace Domain.Model.Categorias
             Id = Guid.NewGuid();
             UsuarioId = usuarioId;
             Nombre = nombre;
-
+            Tipo = tipo;
         }
     }
 }

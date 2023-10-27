@@ -17,6 +17,8 @@ using Application.Security;
 using Infrastructure.EntityFramework.Security;
 using Domain.Repository.Movimientos;
 using Infrastructure.EntityFramwork.Repository.Movimientos;
+using Domain.Repository.Transferencias;
+using Infrastructure.EntityFramwork.Repository.Transferencias;
 
 namespace Infrastructure
 {
@@ -35,6 +37,8 @@ namespace Infrastructure
             services.AddScoped<ICuentaRepository, CuentaRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<IMovimientoRepository, MovimientoRepository>();
+            services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
+
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<AuthenticationSecurity>();
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V77T+uNpcUrrtOr4rFriWbWCWfuUwO1cwaSlAO/RmNEakmCIQrU+j8v4+tsye56NzYdDamYs10bjk3TZ0VO3PA==",
+  "dgSpecHash": "YxlDoM3bv3SyXbxPRLzvyOByuP/oNSIwizlv1p2+m29ru9ORLqzPg0kv3hKjVTrh49ZLJYEiGi3Ihys89Ol2SQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andres\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Andres\\.nuget\\packages\\masstransit\\8.1.1\\masstransit.8.1.1.nupkg.sha512",

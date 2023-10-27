@@ -2,6 +2,7 @@
 using Application.Dto.Movimientos;
 using Application.UseCases.Queries.Cuentas;
 using Application.UseCases.Queries.Movimientos;
+using Domain.Model.Categorias;
 using Infrastructure.EntityFramwork.Context;
 using Infrastructure.EntityFramwork.ReadModel.Cuentas;
 using Infrastructure.EntityFramwork.ReadModel.Movimientos;
@@ -31,8 +32,8 @@ namespace Infrastructure.Queries
                 .Select(cuenta => new MovimientoDto
                 {
                     Id = cuenta.Id,
-                    CuentaId = cuenta.CuentaId,
-                    CategoriaId = cuenta.CategoriaId,
+                    Cuenta = cuenta.Cuenta.Nombre,
+                    Categoria = cuenta.Categoria.Nombre,
                     Descripcion = cuenta.Descripcion,
                     Tipo = cuenta.Tipo,
                     Saldo = cuenta.Saldo

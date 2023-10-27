@@ -12,6 +12,7 @@ namespace Infrastructure.EntityFramwork.Config.ReadConfig.Categorias
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("id");
             builder.Property(x => x.Nombre).HasColumnName("nombre");
+            builder.Property(x => x.Tipo).HasColumnName("tipo");
 
             builder.Property(x => x.UsuarioId).HasColumnName("usuarioId");
             builder.HasOne(x => x.Usuario).WithMany().HasForeignKey(x => x.UsuarioId);

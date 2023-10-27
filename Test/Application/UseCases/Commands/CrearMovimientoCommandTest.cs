@@ -1,5 +1,4 @@
-﻿using Application.UseCases.Commands.Movimientos.CrearEgreso;
-using Application.UseCases.Commands.Movimientos.CrearIngreso;
+﻿using Application.UseCases.Commands.Movimientos.CrearMovimiento;
 using Domain.Model.Usuarios;
 
 namespace Test.Application.UseCases.Commands
@@ -16,7 +15,7 @@ namespace Test.Application.UseCases.Commands
             var descripcion = "Compra de Accesorios";
             var tipo = "Ingreso";
             var saldo = 2000;
-            var command = new CrearIngresoCommand(cuentaId, categoriaId, descripcion, tipo, saldo);
+            var command = new CrearMovimientoCommand(cuentaId, categoriaId, descripcion, tipo, saldo);
 
             Assert.Equal(cuentaId, command.CuentaId);
             Assert.Equal(categoriaId, command.CategoriaId);
@@ -38,7 +37,7 @@ namespace Test.Application.UseCases.Commands
             var descripcion = "Compra de Accesorios";
             var tipo = "Ingreso";
             var saldo = 150;
-            var command = new CrearEgresoCommand(cuentaId, categoriaId, descripcion, tipo, saldo);
+            var command = new CrearMovimientoCommand(cuentaId, categoriaId, descripcion, tipo, saldo);
 
             Assert.Equal(cuentaId, command.CuentaId);
             Assert.Equal(categoriaId, command.CategoriaId);

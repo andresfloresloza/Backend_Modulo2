@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\Test.csproj": {}
+    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj": {
+    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -113,8 +113,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj"
+              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj": {
+    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
         "projectName": "SharedKernel",
-        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
+        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\SharedKernel.csproj",
         "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -213,14 +213,14 @@
         }
       }
     },
-    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\Test.csproj": {
+    "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\Andres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Test\\obj\\",
+        "outputPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -241,11 +241,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj"
+              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj"
               },
-              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Domain\\Domain.csproj"
               }
             }
           }

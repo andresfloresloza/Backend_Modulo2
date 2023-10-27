@@ -25,7 +25,8 @@ internal class GetCategoriaByIdHandler : IRequestHandler<GetCategoriaByIdQuery, 
                 {
                     Id = categoria.Id,
                     UsuarioId = categoria.UsuarioId,
-                    Nombre = categoria.Nombre
+                    Nombre = categoria.Nombre,
+                    Tipo = categoria.Tipo
                 })
                 .ToListAsync();
 

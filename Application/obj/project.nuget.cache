@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qxWPcDoCaU83z9m4aoEsHHBncIFs1+3Kj3LMTDj4LxcCEfoYMBlIohYLG4AXl3w5zrL/UMLJ3Pv8SzFyXLK7SQ==",
+  "dgSpecHash": "vokygY8pnT/97fTR+TDFOaNDDvrTXtq7JXWTft825bQg1eJH34s+4jqjm52uvSvSjX1RMWvkiF/2yg+WkS+57Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\modulo2_backend\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Andres\\OneDrive - Universidad Núr\\Escritorio\\MODULO II\\modulo2_backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andres\\.nuget\\packages\\masstransit\\8.1.1\\masstransit.8.1.1.nupkg.sha512",
     "C:\\Users\\Andres\\.nuget\\packages\\masstransit.abstractions\\8.1.1\\masstransit.abstractions.8.1.1.nupkg.sha512",

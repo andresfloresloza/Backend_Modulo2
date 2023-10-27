@@ -21,9 +21,10 @@ namespace Infrastructure.EntityFramwork.Repository.Movimientos
             await _context.AddAsync(obj);
         }
 
-        public async Task RemoveAsync(Movimiento obj)
+        public async Task RemoveAsync(Guid id)
         {
-            _context.Movimientos.Remove(obj);
+            var movimiento = _context.Movimientos.Find(id);
+            _context.Movimientos.Remove(movimiento);
             await _context.SaveChangesAsync();
         }
 

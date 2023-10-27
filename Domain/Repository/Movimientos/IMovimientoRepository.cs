@@ -6,6 +6,6 @@ namespace Domain.Repository.Movimientos
     public interface IMovimientoRepository : IRepository<Movimiento, Guid>
     {
         Task UpdateAsync(Movimiento obj);
-        Task RemoveAsync(Movimiento obj);
+        Task RemoveAsync(Guid id);
     }
 }

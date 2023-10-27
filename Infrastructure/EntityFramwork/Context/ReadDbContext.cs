@@ -1,10 +1,12 @@
 ﻿using Infrastructure.EntityFramwork.Config.ReadConfig.Categorias;
 using Infrastructure.EntityFramwork.Config.ReadConfig.Cuentas;
 using Infrastructure.EntityFramwork.Config.ReadConfig.Movimientos;
+using Infrastructure.EntityFramwork.Config.ReadConfig.Transferencias;
 using Infrastructure.EntityFramwork.Config.ReadConfig.Usuarios;
 using Infrastructure.EntityFramwork.ReadModel.Categorias;
 using Infrastructure.EntityFramwork.ReadModel.Cuentas;
 using Infrastructure.EntityFramwork.ReadModel.Movimientos;
+using Infrastructure.EntityFramwork.ReadModel.Transferencias;
 using Infrastructure.EntityFramwork.ReadModel.Usuarios;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +18,7 @@ namespace Infrastructure.EntityFramwork.Context
         public virtual DbSet<CuentaReadModel> Cuentas { get; set; }
         public virtual DbSet<CategoriaReadModel> Categorias { get; set; }
         public virtual DbSet<MovimientoReadModel> Movimientos { get; set; }
+        public virtual DbSet<TransferenciaReadModel> Transferencias { get; set; }
 
         public ReadDbContext(DbContextOptions<ReadDbContext> options) : base(options)
         {
@@ -29,6 +32,7 @@ namespace Infrastructure.EntityFramwork.Context
             modelBuilder.ApplyConfiguration<CuentaReadModel>(new CuentaReadConfig());
             modelBuilder.ApplyConfiguration<CategoriaReadModel>(new CategoriaReadConfig());
             modelBuilder.ApplyConfiguration<MovimientoReadModel>(new MovimientoReadConfig());
+            modelBuilder.ApplyConfiguration<TransferenciaReadModel>(new TransferenciaReadConfig());
         }
     }
 }
